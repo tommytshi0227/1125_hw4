@@ -6,7 +6,6 @@
 <body>
 
 <b>Contact Book:</b> <br>
-    
 </body>
 
 <script src="https://cdn.jsdelivr.net/npm/superagent"></script>
@@ -26,9 +25,6 @@ function readContacts(){
                console.log('response:',res.text);
            }
        });
-    
-    var obj = JSON.parse(res.text)
-    console.log(obj.firstName)
 }
 
 </script>
