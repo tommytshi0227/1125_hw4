@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Read Contacts</title>
+</head>
+<body>
+
+<b>Contact Book:</b> <br>
+    
+</body>
+
+<script src="https://cdn.jsdelivr.net/npm/superagent"></script>
+
+<script>
+
+function readContacts(){
+   var url = '/read';
+   
+
+   superagent
+       .get(url)
+       .end(function(err, res){
+           if (err) {
+               console.log('err:',err);
+           } else {
+               console.log('response:',res.text);
+           }
+       });
+    
+    var obj = JSON.parse(res.text)
+    console.log(obj.firstName)
+}
+
+</script>
+
+</html>
+
+
+
+ 
